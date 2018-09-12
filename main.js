@@ -8,4 +8,8 @@ CILCoin.addBlock({sender: "Tony stark", reciver: "Ned stark", amount: 75});
  
 console.log(JSON.stringify(CILCoin, null, 4));
 
-console.log(CILCoin.chainIsValid());
+console.log("Validity: ", CILCoin.chainIsValid());
+console.log("Check if someone edit content")
+CILCoin.chain[0].data.reciver = "Joker";
+console.log("Validity: ", CILCoin.chainIsValid());
+console.log(JSON.stringify(CILCoin, null, 4));
